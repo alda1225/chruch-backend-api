@@ -4,6 +4,9 @@ const faker = require('faker');
 const Ruta = require('../models/Datos');
 module.exports = router;
 
+router.get('/', (req, res) => {
+    res.send('Listo!');
+});
 
 router.get('/api/datos', async(req, res) => {
     const rutas = await Ruta.find();
